@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  jenkins:
+    image: cd14cecfdb3a 
+    ports:
+      - "192.168.50.112:8080:8080"
+      - "192.168.50.112:50000:50000"
+    volumes:
+      - /apps/data/jenkins-data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
